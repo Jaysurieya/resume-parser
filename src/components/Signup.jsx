@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Stepper, { Step } from "./components/Stepper/Stepper";
-import BlurText from "./components/BlurText/BlurText";
-import RoundedSlideButton from "./components/RoundedSlideButton";
+import Stepper, { Step } from "./Stepper/Stepper";
+import BlurText from "./BlurText/BlurText";
+import RoundedSlideButton from "./RoundedSlideButton";
 
 export default function Signup() {
   const [name, setName] = useState("");

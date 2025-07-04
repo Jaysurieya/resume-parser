@@ -10,7 +10,7 @@ function App() {
       ];
   return (
     <div >
-      <div style={{paddingTop: "20px"}}>
+      <div style={{paddingTop: "5px",paddingBottom:"40px"}}>
       <GooeyNav items={navItems}/> 
       </div>
       <SparklesPreview />

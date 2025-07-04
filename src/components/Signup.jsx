@@ -8,6 +8,7 @@ export default function Signup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [registrationComplete, setRegistrationComplete] = useState(false);
 
   return (
     <div style={{ transform: "scale(1.35)", maxWidth: 1500, width: "100%", padding: "48px 32px" }}>
@@ -15,6 +16,7 @@ export default function Signup() {
         initialStep={1}
         nextButtonProps={{ as: RoundedSlideButton, className: "group" }}
         nextButtonText="Continue"
+        onFinalStepCompleted={() => setRegistrationComplete(true)}
       >
         <Step>
           <h2>
@@ -77,6 +79,22 @@ export default function Signup() {
           />
         </Step>
       </Stepper>
+      {registrationComplete && (
+        <div style={{
+          border: '2px rgb(17, 76, 195)',
+          borderRadius: '72px',
+          padding: '32px',
+          marginTop: '42px',
+          background: 'black',
+          textAlign: 'center',
+          fontSize: '1.5rem',
+          color: 'rgb(17, 76, 195)',
+          fontWeight: 'bold',
+          boxShadow: '0 2px 8px rgba(26, 139, 225, 0.1)'
+        }}>
+          Registration completed successfully!
+        </div>
+      )}
     </div>
   );
 } 

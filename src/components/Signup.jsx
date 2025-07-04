@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Stepper, { Step } from "./Stepper/Stepper";
 import BlurText from "./BlurText/BlurText";
 import RoundedSlideButton from "./RoundedSlideButton";
+import {useNavigate   }
 
 export default function Signup() {
   const [name, setName] = useState("");
@@ -79,4 +80,4 @@ export default function Signup() {
       </Stepper>
     </div>
   );
-} 
+}

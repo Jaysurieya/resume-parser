@@ -1,7 +1,3 @@
-/*
-	Installed from https://reactbits.dev/default/
-*/
-
 import React, { useState, Children, useRef, useLayoutEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 

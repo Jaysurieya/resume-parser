@@ -1,19 +1,17 @@
-import { SparklesPreview } from "./components/SparklesPreview";
-import GooeyNav from "./components/GooeyNav/GooeyNav";
+import React from "react"
 import "./App.css";
+import { Routes,Route } from "react-router-dom";
+import Dashboard from "./components/Dashboard";
+import Signup  from "./components/Signup"
 
 function App() {
-    const navItems = [
-        { label: "Home", href: "#home" },
-        { label: "About", href: "#about" },
-        { label: "Contact", href: "#contact" },
-      ];
+
   return (
     <div >
-      <div style={{paddingTop: "5px",paddingBottom:"40px"}}>
-      <GooeyNav items={navItems}/> 
-      </div>
-      <SparklesPreview />
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/signup" element={<Signup />} />
+      </Routes>
     </div>
   );
 }

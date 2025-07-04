@@ -1,5 +1,6 @@
 import React from "react";
 import { SparklesCore } from "./ui/sparkles";
+import ShinyText  from "./ShinyText/ShinyText";
 
 export function SparklesPreview() {
   return (

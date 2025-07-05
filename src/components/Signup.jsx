@@ -3,7 +3,6 @@ import Stepper, { Step } from "./Stepper/Stepper";
 import BlurText from "./BlurText/BlurText";
 import RoundedSlideButton from "./RoundedSlideButton";
 import { useNavigate } from "react-router-dom";
-
 export default function Signup() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -11,15 +10,14 @@ export default function Signup() {
   const [confirmPassword, setConfirmPassword] = useState("");
 
   return (
-    <div
-      style={{
-        transform: "scale(1.35)",
-        maxWidth: 1500,
-        width: "100%",
-        padding: "48px 32px",
-      }}
-    >
-      <Stepper initialStep={1} nextButtonText="Continue">
+
+    <div style={{ transform: "scale(1.35)", maxWidth: 1500, width: "100%", padding: "48px 32px" }}>
+      <Stepper
+        initialStep={1}
+        nextButtonProps={{ as: RoundedSlideButton, className: "group" }}
+        nextButtonText="Continue"
+      >
+
         <Step>
           <h2>
             <BlurText text="Signup Page" />
@@ -112,3 +110,4 @@ export default function Signup() {
     </div>
   );
 }
+

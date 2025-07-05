@@ -1,3 +1,4 @@
+
 import React, { useState, Children, useRef, useLayoutEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -112,9 +113,7 @@ export default function Stepper({
               {currentStep !== 1 && (
                 <button
                   onClick={handleBack}
-                  className={`back-button ${
-                    currentStep === 1 ? "inactive" : ""
-                  }`}
+                  className={`back-button ${currentStep === 1 ? "inactive" : ""}`}
                   {...backButtonProps}
                 >
                   {backButtonText}
@@ -220,7 +219,6 @@ function StepIndicator({
       : currentStep < step
       ? "inactive"
       : "complete";
-
   const handleClick = () => {
     if (step !== currentStep && !disableStepIndicators) onClickStep(step);
   };

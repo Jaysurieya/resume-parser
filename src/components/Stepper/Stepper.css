@@ -30,9 +30,8 @@
   width: 100%;
   max-width: 28rem;
   border-radius: 2rem;
-  background-color: #111;
-  border: 1px solid #333;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+  box-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
   overflow: hidden;
 }
@@ -93,7 +92,6 @@
   color: #fff;
   background-color: #555;
   border-color: #888;
-}
 
 .back-button.inactive {
   pointer-events: none;
@@ -200,4 +198,5 @@
   height: 1rem;
   width: 1rem;
   color: #fff;
+}
 }

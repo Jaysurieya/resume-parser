@@ -14,7 +14,7 @@ export default function App() {
         justifyContent: "center",
       }}
     >
-      <Login />
+      <Signup />
     </div>
   );
 }

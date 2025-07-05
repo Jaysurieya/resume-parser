@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Stepper, { Step } from "./Stepper/Stepper";
 import BlurText from "./BlurText/BlurText";
 import RoundedSlideButton from "./RoundedSlideButton";
-
+//cmt
 export default function Login() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");

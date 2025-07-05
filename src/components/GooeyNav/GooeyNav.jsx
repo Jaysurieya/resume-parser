@@ -2,6 +2,7 @@ import { useRef, useEffect, useState } from "react";
 import "./GooeyNav.css";
 import GlareHover from "../GlareHover/GlareHover"
 import ShinyText from "../ShinyText/ShinyText"
+import { useNavigate } from "react-router-dom";
 
 const GooeyNav = ({
   items,
@@ -26,7 +27,7 @@ const GooeyNav = ({
       ((360 + noise(8)) / totalPoints) * pointIndex * (Math.PI / 180);
     return [distance * Math.cos(angle), distance * Math.sin(angle)];
   };
-
+  const navigate = useNavigate();
   const createParticle = (i, t, d, r) => {
     let rotate = noise(r / 10);
     return {
@@ -181,15 +182,19 @@ const GooeyNav = ({
       </nav>
 
       <div className="flex flex-row gap-1">
-        <GlareHover height="40px" width="65px" children="Sign Up" />
-        <GlareHover height="40px" width="50px" children="Login" />
+        <div onClick={() => navigate("/signup")}>
+          <GlareHover height="40px" width="65px" children="Sign Up" />
+        </div>
+        <div>
+          <GlareHover height="40px" width="50px" children="Login" />
+        </div>
       </div>
 
       {/* Gooey FX */}
       <span className="effect filter" ref={filterRef} />
       <span className="effect text" ref={textRef} />
     </div>
-  );  
+  );
 };
 
 export default GooeyNav;

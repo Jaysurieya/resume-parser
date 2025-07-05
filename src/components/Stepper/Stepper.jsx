@@ -112,7 +112,9 @@ export default function Stepper({
               {currentStep !== 1 && (
                 <button
                   onClick={handleBack}
-                  className={`back-button ${currentStep === 1 ? "inactive" : ""}`}
+                  className={`back-button ${
+                    currentStep === 1 ? "inactive" : ""
+                  }`}
                   {...backButtonProps}
                 >
                   {backButtonText}
@@ -189,7 +191,7 @@ function SlideTransition({ children, direction, onHeightReady }) {
 
 const stepVariants = {
   enter: (dir) => ({
-    x: dir >= 0 ? "-100%" : "100%",
+    x: dir >= 0 ? "100%" : "-100%",
     opacity: 0,
   }),
   center: {
@@ -197,7 +199,7 @@ const stepVariants = {
     opacity: 1,
   },
   exit: (dir) => ({
-    x: dir >= 0 ? "50%" : "-50%",
+    x: dir >= 0 ? "-50%" : "50%",
     opacity: 0,
   }),
 };
@@ -216,8 +218,8 @@ function StepIndicator({
     currentStep === step
       ? "active"
       : currentStep < step
-        ? "inactive"
-        : "complete";
+      ? "inactive"
+      : "complete";
 
   const handleClick = () => {
     if (step !== currentStep && !disableStepIndicators) onClickStep(step);

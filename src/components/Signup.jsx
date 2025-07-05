@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Stepper, { Step } from "./Stepper/Stepper";
 import BlurText from "./BlurText/BlurText";
 import RoundedSlideButton from "./RoundedSlideButton";
-import {useNavigate   }
+import { useNavigate } from "react-router-dom";
 
 export default function Signup() {
   const [name, setName] = useState("");
@@ -11,12 +11,15 @@ export default function Signup() {
   const [confirmPassword, setConfirmPassword] = useState("");
 
   return (
-    <div style={{ transform: "scale(1.35)", maxWidth: 1500, width: "100%", padding: "48px 32px" }}>
-      <Stepper
-        initialStep={1}
-        nextButtonProps={{ as: RoundedSlideButton, className: "group" }}
-        nextButtonText="Continue"
-      >
+    <div
+      style={{
+        transform: "scale(1.35)",
+        maxWidth: 1500,
+        width: "100%",
+        padding: "48px 32px",
+      }}
+    >
+      <Stepper initialStep={1} nextButtonText="Continue">
         <Step>
           <h2>
             <BlurText text="Signup Page" />
@@ -28,8 +31,15 @@ export default function Signup() {
             type="text"
             placeholder="Enter your name"
             value={name}
-            onChange={e => setName(e.target.value)}
-            style={{ padding: "0.5rem 1rem", fontSize: "1rem", borderRadius: 8, border: "1px solid #333", marginTop: 16, width: "100%" }}
+            onChange={(e) => setName(e.target.value)}
+            style={{
+              padding: "0.5rem 1rem",
+              fontSize: "1rem",
+              borderRadius: 8,
+              border: "1px solid #333",
+              marginTop: 16,
+              width: "100%",
+            }}
           />
         </Step>
         <Step>
@@ -43,8 +53,15 @@ export default function Signup() {
             type="email"
             placeholder="Enter your email"
             value={email}
-            onChange={e => setEmail(e.target.value)}
-            style={{ padding: "0.5rem 1rem", fontSize: "1rem", borderRadius: 8, border: "1px solid #333", marginTop: 16, width: "100%" }}
+            onChange={(e) => setEmail(e.target.value)}
+            style={{
+              padding: "0.5rem 1rem",
+              fontSize: "1rem",
+              borderRadius: 8,
+              border: "1px solid #333",
+              marginTop: 16,
+              width: "100%",
+            }}
           />
         </Step>
         <Step>
@@ -58,8 +75,15 @@ export default function Signup() {
             type="password"
             placeholder="Enter your password"
             value={password}
-            onChange={e => setPassword(e.target.value)}
-            style={{ padding: "0.5rem 1rem", fontSize: "1rem", borderRadius: 8, border: "1px solid #333", marginTop: 16, width: "100%" }}
+            onChange={(e) => setPassword(e.target.value)}
+            style={{
+              padding: "0.5rem 1rem",
+              fontSize: "1rem",
+              borderRadius: 8,
+              border: "1px solid #333",
+              marginTop: 16,
+              width: "100%",
+            }}
           />
         </Step>
         <Step>
@@ -73,8 +97,15 @@ export default function Signup() {
             type="password"
             placeholder="Confirm your password"
             value={confirmPassword}
-            onChange={e => setConfirmPassword(e.target.value)}
-            style={{ padding: "0.5rem 1rem", fontSize: "1rem", borderRadius: 8, border: "1px solid #333", marginTop: 16, width: "100%" }}
+            onChange={(e) => setConfirmPassword(e.target.value)}
+            style={{
+              padding: "0.5rem 1rem",
+              fontSize: "1rem",
+              borderRadius: 8,
+              border: "1px solid #333",
+              marginTop: 16,
+              width: "100%",
+            }}
           />
         </Step>
       </Stepper>

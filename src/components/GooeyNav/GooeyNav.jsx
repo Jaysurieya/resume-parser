@@ -185,7 +185,7 @@ const GooeyNav = ({
         <div onClick={() => navigate("/signup")}>
           <GlareHover height="40px" width="65px" children="Sign Up" />
         </div>
-        <div>
+        <div onClick={() => navigate("/login")}>
           <GlareHover height="40px" width="50px" children="Login" />
         </div>
       </div>

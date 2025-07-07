@@ -36,7 +36,7 @@ export default function Login() {
           </p>
           <input
             type="text"
-            placeholder="Enter your name"
+            placeholder="Enter your nnname"
             value={name}
             onChange={(e) => setName(e.target.value)}
             style={{
